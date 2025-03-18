@@ -3,140 +3,116 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>WebRTC</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            margin: 0;
-            padding: 0;
-            background-color: #f4f4f4;
-        }
-        header {
-            background-color: #ff6b6b;
-            color: ff6b6b;
-            padding: 20px 0;
-            text-align: center;
-            font-size: 2em;
-            animation: fadeIn 2s ease-in-out;
-        }
-        .container {
-            display: flex;
-            flex-wrap: wrap;
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 20px;
-        }
-        .column {
-            flex: 1;
-            min-width: 300px;
-            margin: 10px;
-            padding: 20px;
-            background-color: #fff;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-            transition: transform 0.3s ease, box-shadow 0.3s ease;
-        }
-        .column:hover {
-            transform: translateY(-10px);
-            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
-        }
-        .column h2 {
-            margin-top: 0;
-            color: #2c3e50;
-        }
-        .column img {
-            float: right;
-            margin-left: 20px;
-            margin-bottom: 20px;
-            max-width: 100%;
-            height: auto;
-        }
-        .clearfix::after {
-            content: "";
-            clear: both;
-            display: table;
-        }
-        @keyframes fadeIn {
-            from {
-                opacity: 0;
-            }
-            to {
-                opacity: 1;
-            }
-        }
-        .column:nth-child(odd) {
-            background-color: #2cdce2;
-        }
-        .column:nth-child(even) {
-            background-color: #ff6b6b;
-        }
-    </style>
+    <title>Veille Technologique : WebRTC</title>
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <header>
-        WebRTC - Communication en Temps Réel
+    <header class="header">
+        <h1 class="main-title">Veille Technologique : WebRTC (Web Real-Time Communication)</h1>
     </header>
+
     <div class="container">
-        <div class="column">
-            <h1>WebRTC..?</h1>
-            <p><strong>WebRTC (Web Real-Time Communication)</strong> est une API open source qui permet aux navigateurs web et aux applications mobiles de communiquer en temps réel directement entre eux, sans nécessiter de plugins ou de logiciels tiers. Développée initialement par Google et désormais standardisée par le W3C et l'IETF, WebRTC facilite l'intégration de fonctionnalités de communication telles que la visioconférence, les appels vocaux et le partage de fichiers directement dans les navigateurs.</p>
+        <div class="section">
+            <h2>1. Introduction</h2>
+            <img src="WebRTC-740-fi.png" alt="Illustration WebRTC" class="floating-image">
+            <p>
+                <strong>WebRTC (Web Real-Time Communication)</strong> est une technologie qui permet aux navigateurs et aux applications mobiles de <strong>communiquer directement entre eux en temps réel</strong>, sans avoir besoin de serveurs intermédiaires. Il permet de <strong>passer des appels vidéo, envoyer de l’audio, partager des fichiers et même diffuser son écran</strong>, le tout de manière fluide et sécurisée.
+            </p>
+            <p>
+                Avec WebRTC, plus besoin d’installer de logiciels comme Zoom, Skype ou WhatsApp pour communiquer : tout se fait directement dans le <strong>navigateur</strong> !
+            </p>
         </div>
 
-        <div class="column">
-            <h2>Fonctionnement de WebRTC</h2>
+        <div class="section">
+            <h2>2. Comment fonctionne WebRTC ?</h2>
+            <img src="WebRTC-explained.png" alt="Fonctionnement WebRTC" class="floating-image">
+            <p>
+                WebRTC repose sur trois composants clés :
+            </p>
             <ol>
-                <li><strong>Obtention de l’accès aux périphériques :</strong> L’application demande l'autorisation d'utiliser la caméra et le microphone de l'utilisateur.</li>
-                <li><strong>Négociation SDP (Session Description Protocol) :</strong> Les navigateurs des deux utilisateurs échangent des informations sur leurs capacités multimédias via un serveur de signalisation.</li>
-                <li><strong>Établissement de la connexion Peer-to-Peer (P2P) :</strong> WebRTC utilise le protocole ICE pour tenter d'établir une connexion directe entre les navigateurs.</li>
-                <li><strong>Échange de données :</strong> Une fois la connexion établie, les utilisateurs peuvent échanger des flux audio, vidéo et d'autres types de données en temps réel.</li>
+                <li><strong>Capture des médias</strong> : WebRTC permet d’accéder au microphone, à la caméra et à l’écran d’un appareil.</li>
+                <li><strong>Échange de données en P2P (Peer-to-Peer)</strong> : La communication se fait directement entre deux appareils sans passer par un serveur central.</li>
+                <li><strong>Signalisation et connexion</strong> : WebRTC utilise un serveur de signalisation pour établir la connexion entre les utilisateurs avant que la communication ne devienne directe.</li>
             </ol>
         </div>
 
-        <div class="column">
-            <h2>Avantages de WebRTC</h2>
+        <div class="section">
+            <h2>3. À quoi sert WebRTC ?</h2>
+            <img src="websockets-vs-webrtc-768x403-1.png" alt="Usages de WebRTC" class="floating-image">
             <ul>
-                <li><strong>Communication en temps réel :</strong> Permet une communication instantanée et fluide.</li>
-                <li><strong>Gratuit et open source :</strong> Réduit les coûts de développement et encourage l'innovation.</li>
-                <li><strong>Compatibilité multiplateforme :</strong> Fonctionne sur la plupart des navigateurs modernes et applications mobiles.</li>
-                <li><strong>Sécurité :</strong> Utilise des protocoles de sécurité robustes comme DTLS et SRTP.</li>
-                <li><strong>Flexibilité :</strong> Peut être utilisé pour une variété d'applications.</li>
+                <li><strong>Appels vidéo et audio</strong> : Utilisé par Google Meet, Messenger et WhatsApp.</li>
+                <li><strong>Partage d’écran</strong> : Présentations en ligne et assistance à distance.</li>
+                <li><strong>Jeux en ligne avec chat vocal</strong> : Communication entre joueurs en temps réel.</li>
+                <li><strong>Transfert de fichiers</strong> : Partage direct sans passer par un serveur cloud.</li>
+                <li><strong>Télémédecine</strong> : Consultation à distance entre patients et médecins.</li>
             </ul>
         </div>
 
-        <div class="column">
-            <h2>Inconvénients de WebRTC</h2>
+        <div class="section">
+            <h2>4. Comment utiliser WebRTC ? (Exemple simple en JavaScript)</h2>
+            <img src="Screenshot from 2025-03-18 11-48-12.png" alt="Avantages et inconvénients de WebRTC" class="floating-image">
+            <p>
+                <strong>Explication du code :</strong>
+            </p>
             <ul>
-                <li><strong>Complexité de la signalisation :</strong> La signalisation entre les pairs n'est pas standardisée.</li>
-                <li><strong>Problèmes de NAT et de pare-feu :</strong> Certaines configurations réseau peuvent empêcher l'établissement de connexions directes.</li>
-                <li><strong>Dépendance à la qualité du réseau :</strong> La qualité de la communication peut être affectée par la connexion internet des utilisateurs.</li>
+                <li><code>navigator.mediaDevices.getUserMedia({ video: true, audio: true })</code> : Demande l'accès à la caméra et au micro.</li>
+                <li><code>document.getElementById('video').srcObject = stream;</code> : Affiche le flux vidéo en direct sur la page.</li>
+                <li>Si l'accès est refusé (l'utilisateur bloque la caméra), une erreur s'affiche dans la console.</li>
             </ul>
         </div>
 
-        <div class="column">
-            <h2>Cas d'utilisation de WebRTC</h2>
+        <div class="section">
+            <h2>5. Avantages et inconvénients de WebRTC</h2>
+            <img src="what-is-web-rtc-resi.png" alt="Avantages et inconvénients de WebRTC" class="floating-image">
+            <h3>Avantages</h3>
             <ul>
-                <li><strong>Visioconférence et appels vocaux :</strong> Application la plus courante de WebRTC.</li>
-                <li><strong>Chat en direct et messagerie instantanée :</strong> Intégration de fonctionnalités de chat textuel en temps réel.</li>
-                <li><strong>Partage d'écran et collaboration à distance :</strong> Permet de partager son écran avec d'autres utilisateurs.</li>
-                <li><strong>Jeux en ligne multijoueurs :</strong> Communication en temps réel entre les joueurs.</li>
-                <li><strong>Assistance client à distance :</strong> Permet à un technicien de visualiser l'écran d'un utilisateur.</li>
-                <li><strong>Internet des objets (IoT) :</strong> Communication en temps réel entre des appareils.</li>
+                <li>✔ Gratuit et open-source</li>
+                <li>✔ Connexion rapide et directe</li>
+                <li>✔ Sécurité renforcée avec chiffrement automatique</li>
+                <li>✔ Compatible avec Chrome, Firefox, Edge, Safari</li>
+                <li>✔ Pas besoin d'installation</li>
+            </ul>
+            <h3>Inconvénients</h3>
+            <ul>
+                <li>✗ Dépend de la qualité de connexion Internet</li>
+                <li>✗ Certains navigateurs anciens ne le supportent pas</li>
+                <li>✗ Nécessite un serveur pour la signalisation initiale</li>
             </ul>
         </div>
 
-        <div class="column">
-            <h2>Sécurité de WebRTC</h2>
+        <div class="section">
+            <h2>6. WebRTC et l’avenir de la communication en ligne</h2>
+            <img src="1712832157344.jpeg" alt="Avenir de WebRTC" class="floating-image">
+            <p>
+                WebRTC révolutionne les communications en ligne en proposant une alternative aux logiciels classiques. L’avenir de WebRTC inclut :
+            </p>
             <ul>
-                <li><strong>Chiffrement obligatoire :</strong> WebRTC exige l'utilisation du chiffrement DTLS et SRTP.</li>
-                <li><strong>Sandbox de navigateur :</strong> Les navigateurs isolent généralement les processus WebRTC.</li>
-                <li><strong>Permissions utilisateur :</strong> Les utilisateurs doivent explicitement accorder l'accès à leur caméra et à leur microphone.</li>
+                <li><strong>Amélioration des codecs</strong> pour une meilleure qualité vidéo et audio.</li>
+                <li><strong>Gestion avancée du réseau</strong> pour éviter les interruptions.</li>
+                <li><strong>Intégration avec l’IA</strong> pour la traduction et la réduction du bruit.</li>
             </ul>
         </div>
 
-        <div class="column clearfix">
-            <h2>Conclusion</h2>
-            <p>WebRTC est une technologie puissante et polyvalente qui a révolutionné la communication en temps réel sur le web en permettant des interactions directes entre navigateurs et applications sans nécessiter de plugins. Sa gratuité, sa compatibilité et sa sécurité en font un outil incontournable pour de nombreux développeurs souhaitant intégrer des fonctionnalités de communication en temps réel dans leurs applications.</p>
-            <img src="WebRTC-explained.png" alt="Illustration WebRTC" style="float: right;">
+        <div class="section">
+            <h2>7. Ressources pour aller plus loin</h2>
+            <ul>
+                <img src="The-Ultimate-Guide-to-WebRTC-Web-Real-Time-Communication-in-2022-1024x574.jpg" alt="Conclusion WebRTC" class="floating-image">
+                <li><a href="https://webrtc.org/" target="_blank">Documentation officielle WebRTC</a></li>
+                <li><a href="https://developer.mozilla.org/fr/docs/Web/API/WebRTC_API" target="_blank">Tutoriel WebRTC par MDN</a></li>
+                <li><a href="https://www.youtube.com/watch?v=DvlyzDZDEq4" target="_blank">Vidéo d’introduction à WebRTC</a></li>
+            </ul>
+        </div>
+
+        <div class="section">
+            <h2>8. Conclusion</h2>
+            <p>
+                WebRTC est une technologie puissante qui permet la communication vidéo, audio et le partage de fichiers directement dans le navigateur, sans logiciel supplémentaire. Son efficacité, rapidité et sécurité en font une solution incontournable pour l’avenir des applications web.
+            </p>
         </div>
     </div>
+
+    <footer class="footer">
+        <p>© 2025 Veille Technologique WebRTC    -     GROUPE B</a></p>
+    </footer>
 </body>
 </html>
