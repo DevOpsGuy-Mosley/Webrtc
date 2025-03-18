@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Veille Technologique : WebRTC</title>
+    <title>WebRTC</title>
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
@@ -13,7 +13,7 @@
 
     <div class="container">
         <div class="section">
-            <h2>1. Introduction</h2>
+            <h2>Introduction</h2>
             <img src="WebRTC-740-fi.png" alt="Illustration WebRTC" class="floating-image">
             <p>
                 <strong>WebRTC (Web Real-Time Communication)</strong> est une technologie qui permet aux navigateurs et aux applications mobiles de <strong>communiquer directement entre eux en temps réel</strong>, sans avoir besoin de serveurs intermédiaires. Il permet de <strong>passer des appels vidéo, envoyer de l’audio, partager des fichiers et même diffuser son écran</strong>, le tout de manière fluide et sécurisée.
@@ -24,7 +24,7 @@
         </div>
 
         <div class="section">
-            <h2>2. Comment fonctionne WebRTC ?</h2>
+            <h2>1. Comment fonctionne WebRTC ?</h2>
             <img src="WebRTC-explained.png" alt="Fonctionnement WebRTC" class="floating-image">
             <p>
                 WebRTC repose sur trois composants clés :
@@ -37,7 +37,7 @@
         </div>
 
         <div class="section">
-            <h2>3. À quoi sert WebRTC ?</h2>
+            <h2>2. À quoi sert WebRTC ?</h2>
             <img src="websockets-vs-webrtc-768x403-1.png" alt="Usages de WebRTC" class="floating-image">
             <ul>
                 <li><strong>Appels vidéo et audio</strong> : Utilisé par Google Meet, Messenger et WhatsApp.</li>
@@ -49,7 +49,7 @@
         </div>
 
         <div class="section">
-            <h2>4. Comment utiliser WebRTC ? (Exemple simple en JavaScript)</h2>
+            <h2>3. Comment utiliser WebRTC ? (Exemple simple en JavaScript)</h2>
             <img src="Screenshot from 2025-03-18 11-48-12.png" alt="Avantages et inconvénients de WebRTC" class="floating-image">
             <p>
                 <strong>Explication du code :</strong>
@@ -62,26 +62,159 @@
         </div>
 
         <div class="section">
-            <h2>5. Avantages et inconvénients de WebRTC</h2>
-            <img src="what-is-web-rtc-resi.png" alt="Avantages et inconvénients de WebRTC" class="floating-image">
-            <h3>Avantages</h3>
+            <h2>4. Avantages de WebRTC</h2>
             <ul>
-                <li>✔ Gratuit et open-source</li>
-                <li>✔ Connexion rapide et directe</li>
-                <li>✔ Sécurité renforcée avec chiffrement automatique</li>
-                <li>✔ Compatible avec Chrome, Firefox, Edge, Safari</li>
-                <li>✔ Pas besoin d'installation</li>
+                <li>
+                    <strong>Gratuit et open-source :</strong> Pas de frais de licence, ce qui permet de l’utiliser dans des projets à faible budget.
+                </li>
+                <li>
+                    <strong>Faible latence :</strong> Grâce à la connexion peer-to-peer, les échanges se font rapidement.
+                </li>
+                <li>
+                    <strong>Compatibilité avec les navigateurs modernes :</strong> WebRTC fonctionne dans la plupart des navigateurs sans plugins.
+                </li>
+                <li>
+                    <strong>Sécurisé :</strong> Les communications sont cryptées de bout en bout, garantissant la confidentialité des données.
+                </li>
             </ul>
-            <h3>Inconvénients</h3>
+        </div>
+        
+        <div class="section">
+            <h2>5. Inconvénients de WebRTC</h2>
             <ul>
-                <li>✗ Dépend de la qualité de connexion Internet</li>
-                <li>✗ Certains navigateurs anciens ne le supportent pas</li>
-                <li>✗ Nécessite un serveur pour la signalisation initiale</li>
+                <li>
+                    <strong>Complexité de mise en place :</strong> L’implémentation de WebRTC dans une application peut nécessiter des connaissances techniques approfondies.
+                </li>
+                <li>
+                    <strong>Nécessite un serveur de signalisation :</strong> WebRTC, en tant que technologie peer-to-peer, a besoin d’un serveur pour faciliter la découverte et l’établissement de connexions entre les utilisateurs (signalisation).
+                </li>
+                <li>
+                    <strong>Problèmes de compatibilité dans des environnements complexes :</strong> Certains pare-feu ou réseaux privés peuvent bloquer les connexions WebRTC.
+                </li>
+                <li>
+                    <strong>Peut être gourmand en ressources :</strong> En cas d’appels vidéo à haute qualité ou d’un grand nombre de participants, WebRTC peut utiliser beaucoup de bande passante.
+                </li>
             </ul>
         </div>
 
         <div class="section">
-            <h2>6. WebRTC et l’avenir de la communication en ligne</h2>
+            <h2>6. Alternatives à WebRTC</h2>
+            <img src="Screenshot from 2025-03-18 12-22-26.png" alt="Alternatives à WebRTC" class="floating-image">
+            <p>
+                Voici quelques alternatives à WebRTC pour la communication en temps réel via des applications web, offrant des fonctionnalités similaires tout en ayant des avantages différents.
+            </p>
+
+            <h3>1. Agora.io</h3>
+            <ul>
+                <li>
+                    <strong>Description :</strong> Agora.io est une plateforme qui offre des API pour intégrer la vidéo, l’audio et la messagerie en temps réel dans les applications. Contrairement à WebRTC, Agora simplifie l’intégration et la gestion de la signalisation et des serveurs.
+                </li>
+                <li>
+                    <strong>Caractéristiques :</strong>
+                    <ul>
+                        <li>✔ API facile à utiliser.</li>
+                        <li>✔ Prise en charge de la vidéo, de l’audio et de la messagerie en temps réel.</li>
+                        <li>✔ Prise en charge du partage d’écran et des appels de groupe.</li>
+                    </ul>
+                </li>
+                <li>
+                    <strong>Inconvénient :</strong> Service payant, avec un coût qui peut augmenter en fonction de l’utilisation.
+                </li>
+            </ul>
+
+            <h3>2. Twilio</h3>
+            <ul>
+                <li>
+                    <strong>Description :</strong> Twilio est une plateforme cloud permettant d’ajouter des fonctionnalités de communication (audio, vidéo, SMS, messagerie) à vos applications.
+                </li>
+                <li>
+                    <strong>Caractéristiques :</strong>
+                    <ul>
+                        <li>☑ Vidéo et audio en temps réel.</li>
+                        <li>☑ API flexible pour l’intégration dans diverses applications.</li>
+                        <li>☑ Prise en charge des appels vocaux et vidéo en groupe.</li>
+                    </ul>
+                </li>
+                <li>
+                    <strong>Inconvénient :</strong> Le coût peut être élevé à grande échelle.
+                </li>
+            </ul>
+
+            <h3>3. Daily.co</h3>
+            <ul>
+                <li>
+                    <strong>Description :</strong> Daily.co est une plateforme spécialisée dans la vidéo en temps réel, avec des API pour ajouter facilement des appels vidéo à votre application.
+                </li>
+                <li>
+                    <strong>Caractéristiques :</strong>
+                    <ul>
+                        <li>☑ Vidéo de haute qualité et partage d’écran.</li>
+                        <li>☑ Facilité d’intégration via API.</li>
+                        <li>☑ Évolutivité pour des appels à grande échelle.</li>
+                    </ul>
+                </li>
+                <li>
+                    <strong>Inconvénient :</strong> Moins de fonctionnalités avancées que des plateformes comme Agora.
+                </li>
+            </ul>
+
+            <h3>4. Jitsi</h3>
+            <ul>
+                <li>
+                    <strong>Description :</strong> Jitsi est une solution open-source permettant de réaliser des appels vidéo et audio en temps réel. Elle offre une plateforme autonome ou peut être intégrée à une application.
+                </li>
+                <li>
+                    <strong>Caractéristiques :</strong>
+                    <ul>
+                        <li>☑ Gratuit et open-source.</li>
+                        <li>☑ Prise en charge de la vidéo, de l’audio, et du partage d’écran.</li>
+                        <li>☑ Fonctionne directement dans le navigateur.</li>
+                    </ul>
+                </li>
+                <li>
+                    <strong>Inconvénient :</strong> Moins de support professionnel que les solutions payantes.
+                </li>
+            </ul>
+
+            <h3>5. Zoom Video SDK</h3>
+            <ul>
+                <li>
+                    <strong>Description :</strong> Zoom propose un SDK qui permet d’intégrer ses puissantes fonctionnalités de communication vidéo et audio dans des applications.
+                </li>
+                <li>
+                    <strong>Caractéristiques :</strong>
+                    <ul>
+                        <li>☑ Vidéo et audio de haute qualité.</li>
+                        <li>☑ Partage d’écran et enregistrement de session.</li>
+                        <li>☑ Très bonne scalabilité pour les conférences à grande échelle.</li>
+                    </ul>
+                </li>
+                <li>
+                    <strong>Inconvénient :</strong> Le SDK peut être plus complexe à intégrer pour les développeurs novices.
+                </li>
+            </ul>
+
+            <h3>6. Vonage (anciennement Nexmo)</h3>
+            <ul>
+                <li>
+                    <strong>Description :</strong> Vonage propose des API pour la communication en temps réel (vidéo, audio et messagerie).
+                </li>
+                <li>
+                    <strong>Caractéristiques :</strong>
+                    <ul>
+                        <li>☑ Prise en charge des appels vidéo et audio.</li>
+                        <li>☑ API simple à utiliser.</li>
+                        <li>☑ Prise en charge de la messagerie instantanée.</li>
+                    </ul>
+                </li>
+                <li>
+                    <strong>Inconvénient :</strong> Tarification basée sur l’utilisation, qui peut augmenter en fonction du volume.
+                </li>
+            </ul>
+        </div>
+
+        <div class="section">
+            <h2>7. WebRTC et l’avenir de la communication en ligne</h2>
             <img src="1712832157344.jpeg" alt="Avenir de WebRTC" class="floating-image">
             <p>
                 WebRTC révolutionne les communications en ligne en proposant une alternative aux logiciels classiques. L’avenir de WebRTC inclut :
@@ -94,7 +227,7 @@
         </div>
 
         <div class="section">
-            <h2>7. Ressources pour aller plus loin</h2>
+            <h2>8. Ressources pour aller plus loin</h2>
             <ul>
                 <img src="The-Ultimate-Guide-to-WebRTC-Web-Real-Time-Communication-in-2022-1024x574.jpg" alt="Conclusion WebRTC" class="floating-image">
                 <li><a href="https://webrtc.org/" target="_blank">Documentation officielle WebRTC</a></li>
@@ -104,7 +237,7 @@
         </div>
 
         <div class="section">
-            <h2>8. Conclusion</h2>
+            <h2>Conclusion</h2>
             <p>
                 WebRTC est une technologie puissante qui permet la communication vidéo, audio et le partage de fichiers directement dans le navigateur, sans logiciel supplémentaire. Son efficacité, rapidité et sécurité en font une solution incontournable pour l’avenir des applications web.
             </p>
